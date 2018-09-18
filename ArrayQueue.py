@@ -46,3 +46,9 @@ class ArrayQueue:
 			return self.data'''
 	def viewqueue(self):
 		return self.data
+	def rotate(self):
+		new=self.data[self.front]
+		#self.data[self.front]=None
+		new_pos=(self.front+self.size)%len(self.data)
+		self.data[new_pos]=new
+		self.front=(self.front+1)%len(self.data)
