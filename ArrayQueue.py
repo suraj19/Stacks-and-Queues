@@ -18,6 +18,7 @@ class ArrayQueue:
 		#print(ele)
 		self.data[avail]=ele
 		self.size+=1
+		
 	def resize(self,cap):
 			old=self.data
 			walk=self.front
@@ -26,6 +27,7 @@ class ArrayQueue:
 				self.data[k]=old[walk]
 				walk=(1+walk)%len(old)
 			self.front=0
+			
 	def dequeue(self):
 		if self.is_empty():
 			print("The Queue is Empty")
